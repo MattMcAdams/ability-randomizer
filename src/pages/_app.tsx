@@ -6,7 +6,6 @@ import Provider from "@/context";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useEffect } from "react";
-import { init } from "@plausible-analytics/tracker";
 
 export default function App({
   Component,
@@ -14,9 +13,11 @@ export default function App({
 }: AppProps) {
 
   useEffect(() => {
-    init({
-      domain: "abilityrng.mcdms.dev",
-    });
+    if (typeof window !== "undefined") {
+      import("@plausible-analytics/tracker").then(({ init }) => {
+        init({ domain: "abilityrng.mcdms.dev" });
+      });
+    }
   }, []);
 
   return (
