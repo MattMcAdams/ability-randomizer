@@ -5,12 +5,19 @@ import { themes } from "@/themes";
 import Provider from "@/context";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect } from "react";
+import { init } from "@plausible-analytics/tracker";
 
 export default function App({
   Component,
   pageProps: { session, ...pageProps },
 }: AppProps) {
+
+  useEffect(() => {
+    init({
+      domain: "abilityrng.mcdms.dev",
+    });
+  }, []);
 
   return (
     <>
