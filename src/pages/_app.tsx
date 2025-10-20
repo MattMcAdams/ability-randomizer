@@ -24,6 +24,7 @@ export default function App({
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Pokemon Ability Randomizer</title>
       </Head>
       <Provider>
         <div id="app">
