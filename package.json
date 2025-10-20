@@ -1,0 +1,39 @@
+{
+  "name": "pokemon-ability-randomizer",
+  "version": "1.0.0",
+  "description": "A tool for randomizing pokemon abilities",
+  "private": true,
+  "license": "GPU-3.0",
+  "author": {
+    "name": "Matthew McAdams",
+    "email": "mattmcadams@outlook.com",
+    "url": "https://mattmcadams.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MattMcAdams/ability-randomizer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MattMcAdams/ability-randomizer/issues"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.2.32",
+    "next-pwa": "^5.6.0",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "typescript": "^5"
+  }
+}

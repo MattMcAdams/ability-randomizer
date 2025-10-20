@@ -1,0 +1,183 @@
+/*
+background (page background)
+text (text placed on the page background must have contrast with background)
+border (used as frame)
+table-hover (hover color for table rows on hover)
+table-text (the text color for the table must have contrast with table-background and table-hover)
+table-heading-text (text color for table headings must have contrast with table-heading-background)
+table-heading-background (background color for table headings)
+table-border (used for the dividers between rows in the table)
+table-background (background color for the table rows)
+action (text color for links must have contrast with background)
+action-hover (hover color for links must have contrast with background)
+ability-background (the background color for ability cards)
+ability-text (the text color for ability cards must have contrast with ability-background)
+ability-border (the border color for ability cards)
+ability-shadow (the shadow color for ability cards)
+input-text (the text color for input fields must have contrast with input-background)
+input-background (the background color for input fields)
+input-border (the border color for input fields)
+focus-color (the outline color for focused elements)
+*/
+
+h1 {
+  font-size: var(--font_size--large);
+  line-height: var(--font_height--large);
+}
+
+.header__content {
+  padding-block: 0.5em;
+  border-bottom: 1px solid var(--color_text);
+  align-items: center;
+}
+
+.ability-card {
+  position: relative;
+  border: 3px solid var(--color_ability-border);
+  border-radius: 10px;
+  padding: 1em 1em 2em;
+  background-color: var(--color_ability-background);
+  color: var(--color_ability-text);
+  text-align: center;
+  margin-block-end: 1em;
+  box-shadow: color-mix(in srgb, var(--color_ability-shadow) 40%, transparent) 5px 5px, color-mix(in srgb, var(--color_ability-shadow) 30%, transparent) 10px 10px, color-mix(in srgb, var(--color_ability-shadow) 20%, transparent) 15px 15px, color-mix(in srgb, var(--color_ability-shadow) 10%, transparent) 20px 20px, color-mix(in srgb, var(--color_ability-shadow) 5%, transparent) 25px 25px;
+}
+
+.ability-card__title {
+  font-size: var(--font_size--medium);
+  line-height: var(--font_height--medium);
+}
+
+.ability-card__controls {
+  position: absolute;
+  bottom: -1em;
+  right: 1em;
+  display: flex;
+  gap: 0.5em;
+}
+
+button {
+  color: var(--color_background);
+  background-color: var(--color_action);
+}
+
+button:hover,
+button:focus-visible {
+  background-color: var(--color_action-hover);
+}
+
+.ability-card__controls button {
+  border: 3px solid var(--color_action-border);
+  padding: 0.6em 0.5em;
+  border-radius: 9999px;
+}
+
+.controls button,
+.clear-blacklist-btn,
+.buddy-controls button {
+  display: block;
+  width: 100%;
+  line-height: 1em;
+  border: none;
+  padding: 1em 1em;
+  border: 3px solid var(--color_action-border);
+  font-weight: bold;
+}
+
+.controls button,
+.clear-blacklist-btn,
+.controls input,
+.controls select,
+.lil-buddy__select,
+.buddy-controls button,
+.theme-selector details input {
+  border-radius: 5px;
+}
+
+.ability-offerings__error {
+  margin-block: var(--space_flow);
+  background-color: color-mix(in srgb, var(--color_action) 10%, transparent);
+  border: 3px solid var(--color_action);
+  border-radius: 10px;
+  padding: 1em;
+  margin-block-end: 1em;
+}
+
+.clear-blacklist-btn {
+  margin-block-start: var(--space_flow);
+}
+
+.blacklist h2 {
+  font-size: var(--font_size--medium);
+  line-height: var(--font_height--medium);
+}
+
+.blacklist li {
+  display: flex;
+  justify-content: space-between;
+  border-block-end: 1px solid var(--color_table-border);
+}
+
+.blacklist li button,
+.ability-list button {
+  background: var(--color_background);
+  color: var(--color_action);
+  border: none;
+  padding: 0;
+}
+
+.blacklist li button:hover,
+.blacklist li button:focus-visible,
+.ability-list button:hover,
+.ability-list button:focus-visible {
+  background: var(--color_background);
+  color: var(--color_action-hover);
+  border: none;
+  padding: 0;
+}
+
+.ability-list {
+  margin-block-start: var(--space_section);
+}
+
+.ability-list button {
+  background-color: transparent;
+}
+
+.ability-list h2 {
+  font-size: var(--font_size--large);
+  line-height: var(--font_height--large);
+}
+
+.ability-list s {
+  opacity: 0.5;
+}
+
+.ability-list tr.blacklisted {
+  color: var(--color_text--subtle);
+}
+
+.lil-buddy {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border: 3px solid var(--color_border);
+  margin-inline: auto;
+  margin-block: var(--space_section) var(--space_flex-gap);
+  display: grid;
+  place-items: center;
+  background: var(--color_buddy-background);
+  border-radius: 10px;
+}
+
+.buddy-controls {
+  display: flex;
+  gap: var(--space_flex-gap);
+}
+
+.buddy-controls button {
+  flex-basis: min-content;
+}
+
+.theme-selector details {
+  margin-block-start: var(--space_flex-gap);
+}
